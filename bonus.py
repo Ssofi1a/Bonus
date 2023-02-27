@@ -1,5 +1,7 @@
-time= input("Enter the time in format HH:MM:SS ")
-hours, minutes, seconds = time.split(':')
+import time
+
+t = input("Enter the time in format HH:MM:SS ")
+hours, minutes, seconds = t.split(':')
 hours = int(hours)
 minutes = int(minutes)
 seconds = int(seconds)
@@ -10,4 +12,6 @@ for i in range(time_in_seconds, 0, -1):
     minutes, seconds = divmod(i, 60)
     hours, minutes = divmod(minutes, 60)
     print(f"{hours:02d}:{minutes:02d}:{seconds:02d}")
+    time.sleep(1)
+   
 
